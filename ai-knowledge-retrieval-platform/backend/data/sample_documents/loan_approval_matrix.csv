@@ -1,0 +1,6 @@
+Tier,RiskRating,MinCreditScore,MaxDebtToIncomeRatio,MaxLoanToValueRatio,ApprovalAuthority
+Tier 1,Low Risk,740,36%,80%,Automated Underwriting Engine
+Tier 2,Moderate Risk,680,43%,85%,Senior Underwriter Approval
+Tier 3,Elevated Risk,620,48%,90%,Credit Committee Review
+Tier 4,High Risk / Subprime,580,50%,95%,Chief Risk Officer Exception Required
+Tier 5,Unacceptable Risk,Below 580,Exceeds 50%,Exceeds 95%,Mandatory Automatic Decline

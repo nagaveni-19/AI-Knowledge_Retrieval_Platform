@@ -1,0 +1,5 @@
+ServiceTier,TargetSLOAvailability,MaxAllowedDowntimeMonthly,TargetP99LatencyMs,MTTRTargetMinutes
+Tier-1 Core API,99.99%,4.38 minutes,120ms,15 minutes
+Tier-2 Background Jobs,99.9%,43.8 minutes,500ms,45 minutes
+Tier-3 Reporting & Analytics,99.5%,219.1 minutes,2500ms,120 minutes
+Tier-4 Internal Tooling,99.0%,438.0 minutes,5000ms,240 minutes

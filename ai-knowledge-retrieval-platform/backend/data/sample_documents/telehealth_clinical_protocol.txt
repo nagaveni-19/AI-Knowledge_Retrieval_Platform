@@ -1,0 +1,20 @@
+TELEHEALTH CLINICAL ESCALATION AND PATIENT INTAKE PROTOCOL
+
+1. Overview and Purpose
+This document establishes clinical guidelines for remote telemedicine evaluations and vital sign monitoring. Clinicians must adhere strictly to these criteria to determine when patient condition necessitates immediate emergency escalation.
+
+2. Vital Sign Criteria for Emergency Escalation
+Telehealth practitioners must trigger immediate emergency ambulance escalation (Code Red) if any of the following parameters are observed:
+- Resting Heart Rate exceeding 135 bpm or sustained below 45 bpm with dizziness.
+- Systolic Blood Pressure greater than 180 mmHg or Diastolic Blood Pressure greater than 110 mmHg.
+- Pulse Oximetry (SpO2) falling below 91% on room air.
+- Acute onset neurological deficits including facial drooping, unilateral arm weakness, or slurred speech.
+- Severe dyspnea preventing completion of full sentences during the video consultation.
+
+3. Step-by-Step Remote Patient Triage Procedure
+Step 1: Patient Identity and Location Verification: Confirm patient legal name, date of birth, and exact physical street address where the patient is currently located.
+Step 2: Chief Complaint and Severity Scoring: Record the primary symptom duration, pain scale (1 to 10), and onset trajectory.
+Step 3: Visual Clinical Assessment: Evaluate respiratory rate, work of breathing, skin pallor, and cognitive alertness over video feed.
+Step 4: Objective Metric Collection: Request patient to report home biometric readings (blood pressure cuff, pulse oximeter, thermometer).
+Step 5: Disposition Decision: Assign triage priority (Level 1: Immediate ER, Level 2: Urgent Care within 4 hours, Level 3: Scheduled Clinic Visit).
+Step 6: Prescription and Documentation: Document clinical rationale in EHR and transmit e-prescription to certified pharmacy.

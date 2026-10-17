@@ -1,0 +1,6 @@
+TriageLevel,Category,MaxWaitMinutes,EscalationPath,RequiredPhysicianSpecialty
+Level 1,Immediate Resuscitation,0,Emergency 911 Dispatch,Emergency Medicine
+Level 2,Urgent Telehealth,30,On-Call Hospital Triage Attending,Internal Medicine / Pediatrics
+Level 3,Semi-Urgent Consultation,120,Tele-Clinic Provider,Family Medicine
+Level 4,Routine Follow-Up,1440,Scheduled Primary Care,General Practitioner
+Level 5,Administrative / Refill,2880,Clinical Pharmacist Review,Pharmacy Specialist

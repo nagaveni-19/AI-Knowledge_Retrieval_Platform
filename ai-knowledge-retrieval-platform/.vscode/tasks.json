@@ -1,0 +1,38 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "1. Start Backend (FastAPI)",
+      "type": "shell",
+      "command": "python backend/run_backend.py",
+      "problemMatcher": [],
+      "group": "build",
+      "options": {
+        "env": {
+          "PYTHONPATH": "backend"
+        }
+      }
+    },
+    {
+      "label": "2. Start Frontend (Vite React)",
+      "type": "shell",
+      "command": "npm run dev",
+      "options": {
+        "cwd": "${workspaceFolder}/frontend"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "3. Seed Sample Documents & Rebuild Index",
+      "type": "shell",
+      "command": "python backend/data/create_sample_data.py",
+      "problemMatcher": []
+    },
+    {
+      "label": "4. Run All Pytest Tests",
+      "type": "shell",
+      "command": "python -m pytest backend/tests -v",
+      "problemMatcher": []
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+ANTI-MONEY LAUNDERING (AML) AND KNOW YOUR CUSTOMER (KYC) COMPLIANCE POLICY
+
+1. Regulatory Mandate and Currency Transaction Reporting
+Under Bank Secrecy Act and FinCEN directives, all covered institutions must file a Currency Transaction Report (CTR) for each cash transaction (deposits, withdrawals, currency exchanges) exceeding $10,000 conducted by or on behalf of a single entity during any rolling 24-hour business window.
+
+2. Enhanced Due Diligence (EDD) Steps for High-Risk Entities
+Step 1: Beneficial Ownership Identification: Identify and verify all natural persons owning 25% or greater equity interest in corporate entities.
+Step 2: PEP Screening: Screen all principals and beneficial owners against global Politically Exposed Persons (PEP) and OFAC sanctions databases.
+Step 3: Source of Wealth and Source of Funds Verification: Collect audited financial statements, tax returns, and corporate bank statements for the preceding 24 months.
+Step 4: Adverse Media Verification: Conduct automated open-source and law-enforcement media queries for fraud, bribery, or financial crime links.
+Step 5: Ongoing Monitoring Frequency: Assign high-risk classification and schedule automated biometric and transactional re-reviews every 6 months.
+
+3. Suspicious Activity Report (SAR) Filing Thresholds
+Financial institutions are required to file a SAR for known or suspected criminal violations or insider abuse involving any dollar amount, and for suspicious transactions totaling $5,000 or more where a suspect can be identified, or $25,000 regardless of whether a potential suspect has been identified.
