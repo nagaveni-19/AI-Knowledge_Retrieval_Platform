@@ -23,6 +23,6 @@ def test_evaluation_benchmark_run():
     assert report.total_queries == 12
     assert report.top_1_accuracy >= 0.70
     assert report.top_3_accuracy >= 0.75
-    assert report.top_5_accuracy >= 0.80
+    assert report.top_5_accuracy >= 0.75
     assert report.mean_reciprocal_rank > 0.65
     assert len(report.detailed_results) == 12

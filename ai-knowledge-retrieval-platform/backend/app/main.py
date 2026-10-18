@@ -174,18 +174,60 @@ def get_latest_benchmark():
     return evaluation_service.run_benchmark()
 
 # -------------------------------------------------------------
-# Static Frontend Serving (Optional standalone production mode)
+# Static Frontend Serving (Production Single Page App)
 # -------------------------------------------------------------
+from pathlib import Path
 from fastapi.staticfiles import StaticFiles
 from fastapi.responses import FileResponse
 
-frontend_dist = settings.BASE_DIR.parent / "frontend" / "dist"
-if frontend_dist.exists():
-    app.mount("/assets", StaticFiles(directory=str(frontend_dist / "assets")), name="assets")
+candidate_dirs = [
+    settings.BASE_DIR.parent / "frontend" / "dist",
+    settings.BASE_DIR / "static",
+    settings.BASE_DIR / "frontend" / "dist",
+    Path.cwd() / "frontend" / "dist",
+    Path.cwd() / "ai-knowledge-retrieval-platform" / "frontend" / "dist",
+    Path.cwd() / "static",
+    Path(__file__).resolve().parent.parent.parent / "frontend" / "dist",
+]
+
+frontend_dist: Optional[Path] = None
+for candidate in candidate_dirs:
+    if candidate.exists() and (candidate / "index.html").exists():
+        frontend_dist = candidate
+        break
+
+if frontend_dist:
+    assets_dir = frontend_dist / "assets"
+    if assets_dir.exists():
+        app.mount("/assets", StaticFiles(directory=str(assets_dir)), name="assets")
+
+    @app.get("/")
+    def serve_root():
+        index_file = frontend_dist / "index.html"
+        return FileResponse(str(index_file))
 
     @app.get("/{full_path:path}")
     def serve_frontend(full_path: str):
+        # Let API or docs routes return 404 if not found rather than serving index.html
+        if full_path.startswith("api/") or full_path.startswith("docs") or full_path.startswith("openapi.json"):
+            raise HTTPException(status_code=404, detail="Endpoint not found")
+
         file_path = frontend_dist / full_path
         if file_path.exists() and file_path.is_file():
-            return FileResponse(file_path)
-        return FileResponse(frontend_dist / "index.html")
+            return FileResponse(str(file_path))
+
+        index_file = frontend_dist / "index.html"
+        if index_file.exists():
+            return FileResponse(str(index_file))
+        raise HTTPException(status_code=404, detail="Page not found")
+else:
+    @app.get("/")
+    def serve_root_fallback():
+        return {
+            "status": "online",
+            "service": "AI-Based Knowledge Retrieval Platform API",
+            "version": "1.0.0",
+            "docs_url": "/docs",
+            "health_url": "/api/health",
+            "message": "Backend API is online. Frontend build directory not detected."
+        }
